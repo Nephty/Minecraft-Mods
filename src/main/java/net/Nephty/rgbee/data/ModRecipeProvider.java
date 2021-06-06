@@ -4,6 +4,7 @@ import net.Nephty.rgbee.Rgbee;
 import net.Nephty.rgbee.setup.ModBlocks;
 import net.Nephty.rgbee.setup.ModItems;
 import net.minecraft.data.*;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 
@@ -22,6 +23,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ModBlocks.POLLEN_BLOCK.get()))
                 .save(consumer);
 
+        // 9 Pollen -> 1 Pollen block
         ShapedRecipeBuilder.shaped(ModBlocks.POLLEN_BLOCK.get())
                 .define('#', ModItems.POLLEN.get())
                 .pattern("###")
@@ -30,6 +32,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ModItems.POLLEN.get()))
                 .save(consumer);
 
+        // 1 Pollen + 1 Bottle -> 1 Liquid pollen bottle
+        ShapelessRecipeBuilder.shapeless(ModItems.LIQUID_POLLEN_BOTTLE.get(), 1)
+                .requires(ModItems.LIQUID_POLLEN.get()).requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_item", has(ModItems.LIQUID_POLLEN.get()))
+                .save(consumer);
+
+        // 1 Pollen -> 1 Liquid Pollen
         CookingRecipeBuilder.smelting(Ingredient.of(ModItems.POLLEN.get()), ModItems.LIQUID_POLLEN.get(), 0.7f, 200)
                 .unlockedBy("has_item", has(ModItems.POLLEN.get()))
                 .save(consumer, modId("pollen_smelting"));
