@@ -9,6 +9,8 @@ public class ModItems {
             new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
     public static final RegistryObject<Item> LIQUID_POLLEN = Registration.ITEMS.register("liquid_pollen", () ->
             new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+    public static final RegistryObject<Item> LIQUID_POLLEN_BOTTLE = Registration.ITEMS.register("liquid_pollen_bottle", () ->
+            new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
 
 
     static void register() {}

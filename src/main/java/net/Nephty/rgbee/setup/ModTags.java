@@ -25,6 +25,8 @@ public class ModTags {
     public static final class Items {
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_POLLEN_BLOCK = forge("storage_blocks/pollen_block");
         public static final ITag.INamedTag<Item> MATERIALS_LIQUID_POLLEN = forge("materials/liquid_pollen");
+        public static final ITag.INamedTag<Item> MATERIALS_LIQUID_POLLEN_BOTTLE = forge("materials/liquid_pollen_bottle");
+
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.createOptional(new ResourceLocation("forge", path));
