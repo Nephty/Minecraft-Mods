@@ -1,4 +1,6 @@
 {
   "item.rgbee.pollen": "Pollen",
-  "block.rgbee.pollen_block": "Pollen Block"
+  "block.rgbee.pollen_block": "Pollen Block",
+  "item.rgbee.liquid_pollen": "Liquid Pollen",
+  "item.rgbee.liquid_pollen_bottle": "Liquid Pollen Bottle"
 }
