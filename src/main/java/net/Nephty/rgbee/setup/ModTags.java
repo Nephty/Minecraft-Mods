@@ -12,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 public class ModTags {
     public static final class Blocks {
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_POLLEN_BLOCK = forge("storage_blocks/pollen_block");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_ENCHANTED_FLOWER = forge("storage_blocks/enchanted_flower");
 
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.createOptional(new ResourceLocation("forge", path));
@@ -26,7 +27,7 @@ public class ModTags {
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_POLLEN_BLOCK = forge("storage_blocks/pollen_block");
         public static final ITag.INamedTag<Item> MATERIALS_LIQUID_POLLEN = forge("materials/liquid_pollen");
         public static final ITag.INamedTag<Item> MATERIALS_LIQUID_POLLEN_BOTTLE = forge("materials/liquid_pollen_bottle");
-
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_ENCHANTED_FLOWER = forge("storage_blocks/enchanted_flower");
 
         private static ITag.INamedTag<Item> forge(String path) {
             return ItemTags.createOptional(new ResourceLocation("forge", path));

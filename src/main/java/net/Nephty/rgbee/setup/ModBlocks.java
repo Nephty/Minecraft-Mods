@@ -1,5 +1,6 @@
 package net.Nephty.rgbee.setup;
 
+import net.Nephty.rgbee.data.blocks.CustomFlower;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -7,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -16,9 +18,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLLEN_BLOCK = register("pollen_block",
             () -> new Block(AbstractBlock.Properties.of(Material.WOOL)
                     .sound(SoundType.HONEY_BLOCK)
-                    .jumpFactor((float) 0.8)
+                    .jumpFactor(0.8F)
                     .harvestTool(ToolType.HOE)
-                    .strength((float) 0.3, 3)));
+                    .strength(0.3F, 3)));
+    public static final RegistryObject<Block> ENCHANTED_FLOWER = register("enchanted_flower", () ->
+            new CustomFlower(Effects.HEAL, 1, AbstractBlock.Properties.of(Material.PLANT)
+                    .noCollission()
+                    .instabreak()
+                    .noOcclusion()
+                    .sound(SoundType.GRASS)));
+
     public static void register() {}
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {

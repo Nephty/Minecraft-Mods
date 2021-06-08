@@ -3,6 +3,7 @@ package net.Nephty.rgbee.data;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import net.Nephty.rgbee.setup.ModBlocks;
+import net.Nephty.rgbee.setup.ModItems;
 import net.Nephty.rgbee.setup.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
@@ -40,6 +41,7 @@ public class ModLootTableProvider extends LootTableProvider {
         @Override
         protected void addTables() {
             dropSelf(ModBlocks.POLLEN_BLOCK.get());
+            dropSelf(ModBlocks.ENCHANTED_FLOWER.get());
         }
 
         @Override

@@ -33,6 +33,8 @@ public class ModItemsModelProvider extends ItemModelProvider {
         itemBuilder(itemGenerated, "pollen");
         itemBuilder(itemGenerated, "liquid_pollen");
         itemBuilder(itemGenerated, "liquid_pollen_bottle");
+        itemBuilder(itemGenerated, "enchanter_flower");
+        itemBuilder(itemGenerated, "enchanted_flower_item");
     }
 
     private ItemModelBuilder itemBuilder(ModelFile itemGenerated, String name) {

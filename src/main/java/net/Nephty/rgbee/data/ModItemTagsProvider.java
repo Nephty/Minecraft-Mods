@@ -17,6 +17,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags() {
         copy(ModTags.Blocks.STORAGE_BLOCKS_POLLEN_BLOCK, ModTags.Items.STORAGE_BLOCKS_POLLEN_BLOCK);
+        copy(ModTags.Blocks.STORAGE_BLOCKS_ENCHANTED_FLOWER, ModTags.Items.STORAGE_BLOCKS_ENCHANTED_FLOWER);
         tag(ModTags.Items.MATERIALS_LIQUID_POLLEN).addTag(Tags.Items.SLIMEBALLS);
     }
 }

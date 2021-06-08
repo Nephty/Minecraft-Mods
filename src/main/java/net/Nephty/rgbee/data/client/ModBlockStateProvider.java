@@ -2,7 +2,9 @@ package net.Nephty.rgbee.data.client;
 
 import net.Nephty.rgbee.Rgbee;
 import net.Nephty.rgbee.setup.ModBlocks;
+import net.minecraft.block.FlowerBlock;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -14,5 +16,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.POLLEN_BLOCK.get());
+        simpleBlock(ModBlocks.ENCHANTED_FLOWER.get());
     }
 }

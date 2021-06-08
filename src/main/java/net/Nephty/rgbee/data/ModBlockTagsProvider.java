@@ -17,5 +17,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     protected void addTags() {
         tag(ModTags.Blocks.STORAGE_BLOCKS_POLLEN_BLOCK).add(ModBlocks.POLLEN_BLOCK.get());
         tag(Tags.Blocks.DIRT).addTags(ModTags.Blocks.STORAGE_BLOCKS_POLLEN_BLOCK);
+        tag(ModTags.Blocks.STORAGE_BLOCKS_ENCHANTED_FLOWER).add(ModBlocks.ENCHANTED_FLOWER.get());
     }
 }
