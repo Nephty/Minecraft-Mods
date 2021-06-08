@@ -1,1 +1,2 @@
 ﻿Build: 1.16.5-0.0.1 - Sun Jun 06 20:52:35 GMT 2021 Nephty : Added pollen, pollen block, liquid pollen, liquid pollen bottle. Nine pollen will craft a pollen block and liquid pollen and a bottle will craft a liquid pollen bottle. Pollen is smeltable into liquid pollen.
+Build: 1.16.5-0.0.1 - Tue Jun 08 21:53:08 GMT 2021 Nephty : Added pollen harvester and enchanted flowers. Player has to use the pollen harvester to gather pollen from enchanted flowers.
