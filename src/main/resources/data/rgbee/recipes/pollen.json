@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "rgbee:pollen_block"
+    }
+  ],
+  "result": {
+    "item": "rgbee:pollen",
+    "count": 9
+  }
+}
