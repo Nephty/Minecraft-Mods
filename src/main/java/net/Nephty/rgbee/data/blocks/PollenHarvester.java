@@ -8,7 +8,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class PollenHarvester extends ShearsItem {
-    // TODO : use pollenstack to stack the pollen in the pollen harvester and allow player to retrieve it through crafting
+    // TODO : allow player to retrieve pollen through crafting
+    final int MAX_POLLEN = 128;
     int pollenStack = 0;
     public PollenHarvester(Properties p_i48471_1_) {
         super(p_i48471_1_);

@@ -55,6 +55,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(Items.OAK_SLAB))
                 .unlockedBy("has_item", has(Items.IRON_INGOT))
                 .save(consumer);
+
+        // TODO : Transfer pollen out of harvester
     }
 
     private static ResourceLocation modId(String path) {

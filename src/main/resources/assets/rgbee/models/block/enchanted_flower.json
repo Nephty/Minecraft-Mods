@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "all": "rgbee:block/enchanted_flower"
+    "cross": "rgbee:block/enchanted_flower"
   }
 }
