@@ -5,7 +5,7 @@ This repository contains the minecraft Mods created by the author of said reposi
 
 Currently available mods :
 1. Rgbee
-    - Current version : 0.0.1
+    - Current version : 0.0.3
     - Version name : Pollen introduction
 
 
