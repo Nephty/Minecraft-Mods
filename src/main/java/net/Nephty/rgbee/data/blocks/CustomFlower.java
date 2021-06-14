@@ -44,6 +44,7 @@ public class CustomFlower extends FlowerBlock {
                     }
                     // add a new pollen in pollen harvester
                     ((PollenHarvester) player.inventory.getSelected().getItem()).pollenStack++;
+                    System.out.println(((PollenHarvester) player.inventory.getSelected().getItem()).pollenStack);
                 }
             } else {
                 // TODO : display info message that pollen harvester is full
