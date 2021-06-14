@@ -17,14 +17,12 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 
 public class PollenHarvester extends ShearsItem {
-    // TODO : allow player to retrieve pollen through crafting
     // TODO : make the item stack at 1 max
     public static final int MAX_POLLEN = 128;
     int pollenStack = 0;
 
     public PollenHarvester(Properties p_i48471_1_) {
         super(p_i48471_1_);
-        this.setDamage(new ItemStack(this), 2);
     }
 
     public PollenHarvester(Properties p_i48471_1_, int pollenStack) {
@@ -34,10 +32,12 @@ public class PollenHarvester extends ShearsItem {
 
     @Override
     public boolean mineBlock(ItemStack itemStack, World world, BlockState blockState, BlockPos blockPos, LivingEntity livingEntity) {
+        /*
         itemStack.hurtAndBreak(1, livingEntity, (var) -> {
             var.broadcastBreakEvent(EquipmentSlotType.MAINHAND);
         });
-        return true;
+         */
+        return false;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class PollenHarvester extends ShearsItem {
     public ActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack itemInHand = playerEntity.getItemInHand(hand);
         if (world.isClientSide) {
-            return ActionResult.success(itemInHand);
+            return ActionResult.fail(itemInHand);
         }
         PollenHarvester harvesterInHand = ((PollenHarvester) (itemInHand.getItem()));
         int freeSlots = playerEntity.inventory.getFreeSlot();
@@ -57,6 +57,12 @@ public class PollenHarvester extends ShearsItem {
         int pollenQuantity = harvesterInHand.pollenStack;
 
         if (playerEntity.isCrouching()) {
+            // Generate random probability (1 in 4) of removing 1 of durability of the item when using right click
+            if (Math.random() >= 0.75) {
+                itemInHand.hurtAndBreak(1, playerEntity, (var) -> {
+                    var.broadcastBreakEvent(EquipmentSlotType.MAINHAND);
+                });
+            }
 
             // If we need to extract the pollen from the harvester
             if (!(pollenQuantity == 0 && playerEntity.inventory.contains(new ItemStack(ModItems.POLLEN::get)))) {

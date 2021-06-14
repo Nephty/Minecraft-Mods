@@ -52,11 +52,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("#i#")
                 .pattern("#i#")
                 .pattern("   ")
-                .unlockedBy("has_item", has(Items.OAK_SLAB))
                 .unlockedBy("has_item", has(Items.IRON_INGOT))
                 .save(consumer);
 
-        // TODO : Transfer pollen out of harvester
+        // 8 pollen + 1 gold ingot -> 8 golden pollen
+        ShapedRecipeBuilder.shaped(ModItems.GOLDEN_POLLEN.get(), 8)
+                .define('#', ModItems.POLLEN::get)
+                .define('g', () -> Items.GOLD_INGOT)
+                .pattern("###")
+                .pattern("#g#")
+                .pattern("###")
+                .unlockedBy("has_item", has(ModItems.POLLEN::get))
+                .save(consumer);
     }
 
     private static ResourceLocation modId(String path) {

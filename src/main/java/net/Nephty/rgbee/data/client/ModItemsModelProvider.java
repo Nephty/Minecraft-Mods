@@ -23,6 +23,7 @@ public class ModItemsModelProvider extends ItemModelProvider {
 
         itemBuilder(itemGenerated, "pollen_block_item");
         itemBuilder(itemGenerated, "pollen");
+        itemBuilder(itemGenerated, "golden_pollen");
         itemBuilder(itemGenerated, "liquid_pollen");
         itemBuilder(itemGenerated, "liquid_pollen_bottle");
         itemBuilder(itemGenerated, "pollen_harvester");

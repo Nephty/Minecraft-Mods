@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#g#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rgbee:pollen"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "rgbee:golden_pollen",
+    "count": 8
+  }
+}
