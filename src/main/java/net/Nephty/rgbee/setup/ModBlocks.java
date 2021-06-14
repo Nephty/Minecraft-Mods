@@ -1,6 +1,7 @@
 package net.Nephty.rgbee.setup;
 
 import net.Nephty.rgbee.data.blocks.CustomFlower;
+import net.Nephty.rgbee.data.blocks.PollenBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -16,7 +17,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final RegistryObject<Block> POLLEN_BLOCK = register("pollen_block",
-            () -> new Block(AbstractBlock.Properties.of(Material.WOOL)
+            () -> new PollenBlock(AbstractBlock.Properties.of(Material.WOOL)
                     .sound(SoundType.HONEY_BLOCK)
                     .jumpFactor(0.8F)
                     .harvestTool(ToolType.HOE)
