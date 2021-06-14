@@ -17,7 +17,6 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 
 public class PollenHarvester extends ShearsItem {
-    // TODO : make the item stack at 1 max
     public static final int MAX_POLLEN = 128;
     int pollenStack = 0;
 
