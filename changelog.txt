@@ -2,3 +2,4 @@
 Build: 1.16.5-0.0.2 - Tue Jun 08 21:53:08 GMT 2021 Nephty : Added pollen harvester and enchanted flowers. Player has to use the pollen harvester to gather pollen from enchanted flowers.
 Build : 1.16.5-0.0.3 - Tue Jun 11 08:39:37 GMT 2021 Nephty : The flower rendering is now working as intended.
 Build : 1.16.5-0.0.4 - Tue Jun 11 16:31:39 GMT 2021 Nephty : The pollen harvester now fully works as intended. Shift + right click to extract the pollen stored in the harvester. Shift + left click with an empty harvester to move the pollen from your inventory to the harvester. The maximum capacity of the harvester is 128.
+Build : 1.16.5 0.0.5 - Mon Jun 14 15:10:09 GMT 2021 Nephty : Enchanted flowers now generate the same way poppies do. Patches of enchanted flowers can be found in plains, forests and such.
