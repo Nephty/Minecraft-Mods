@@ -35,7 +35,7 @@ public class CustomFlower extends FlowerBlock {
         }
         if (player.isHolding(ModItems.POLLEN_HARVESTER.get())) {
             // if pollen harvester has room
-            if (((PollenHarvester) player.inventory.getSelected().getItem()).pollenStack < ((PollenHarvester) player.inventory.getSelected().getItem()).MAX_POLLEN) {
+            if (((PollenHarvester) player.inventory.getSelected().getItem()).pollenStack < PollenHarvester.MAX_POLLEN) {
                 // if the player has a free slot
                 if (player.inventory.getFreeSlot() != -1) {
                     // remove 1 durability of the player's shears if not in creative

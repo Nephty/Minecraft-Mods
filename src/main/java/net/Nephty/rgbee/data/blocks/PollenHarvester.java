@@ -18,10 +18,13 @@ import java.util.ArrayList;
 
 public class PollenHarvester extends ShearsItem {
     // TODO : allow player to retrieve pollen through crafting
-    final int MAX_POLLEN = 128;
+    // TODO : make the item stack at 1 max
+    public static final int MAX_POLLEN = 128;
     int pollenStack = 0;
+
     public PollenHarvester(Properties p_i48471_1_) {
         super(p_i48471_1_);
+        this.setDamage(new ItemStack(this), 2);
     }
 
     public PollenHarvester(Properties p_i48471_1_, int pollenStack) {
@@ -42,7 +45,6 @@ public class PollenHarvester extends ShearsItem {
         return ActionResultType.PASS;
     }
 
-    // TODO : doesn't work as intended
     @Override
     public ActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack itemInHand = playerEntity.getItemInHand(hand);
@@ -56,38 +58,8 @@ public class PollenHarvester extends ShearsItem {
 
         if (playerEntity.isCrouching()) {
 
-            // If we need to take the pollen inside the harvester
-            if (pollenQuantity == 0 && playerEntity.inventory.contains(new ItemStack(ModItems.POLLEN::get))) {
-                ArrayList<ItemStack> toRemove = new ArrayList<>();
-                ArrayList<ItemStack> newStacks = new ArrayList<>();
-                for (ItemStack itemStack : playerEntity.inventory.items) {
-                    if (itemStack.getItem().equals(ModItems.POLLEN.get())) {
-                        if (itemStack.getCount() + harvesterInHand.pollenStack <= harvesterInHand.MAX_POLLEN) {
-                            // add it all to the harvester
-                            harvesterInHand.pollenStack += itemStack.getCount();
-                            toRemove.add(itemStack);
-                        } else if (harvesterInHand.pollenStack <= harvesterInHand.MAX_POLLEN) {
-                            // add max - pollenstack
-                            int toAdd = harvesterInHand.MAX_POLLEN - harvesterInHand.pollenStack;
-                            if (toAdd + harvesterInHand.pollenStack >= 128) {
-                                System.out.println("Too many pollen in the harvester. Please report this error on the GitHub page.");
-                            }
-                            harvesterInHand.pollenStack += toAdd;
-                            ItemStack newStack = new ItemStack(ModItems.POLLEN::get, itemStack.getCount() - toAdd);
-                            newStacks.add(newStack);
-                            toRemove.add(itemStack);
-                        }
-                    }
-                }
-                for (ItemStack itemStack : toRemove) {
-                    playerEntity.inventory.removeItem(itemStack);
-                }
-                for (ItemStack itemStack : newStacks) {
-                    playerEntity.inventory.add(itemStack);
-                }
-
             // If we need to extract the pollen from the harvester
-            } else {
+            if (!(pollenQuantity == 0 && playerEntity.inventory.contains(new ItemStack(ModItems.POLLEN::get)))) {
                 if (freeSlots != -1) {
                     ItemStack result;
                     if (freeSpace == 64) {
@@ -111,6 +83,36 @@ public class PollenHarvester extends ShearsItem {
                         harvesterInHand.pollenStack = 0;
                     }
                     return ActionResult.consume(itemInHand);
+                }
+
+            // If we need to take the pollen inside the harvester
+            } else {
+                ArrayList<ItemStack> toRemove = new ArrayList<>();
+                ArrayList<ItemStack> newStacks = new ArrayList<>();
+                for (ItemStack itemStack : playerEntity.inventory.items) {
+                    if (itemStack.getItem().equals(ModItems.POLLEN.get())) {
+                        if (itemStack.getCount() + harvesterInHand.pollenStack <= MAX_POLLEN) {
+                            // add it all to the harvester
+                            harvesterInHand.pollenStack += itemStack.getCount();
+                            toRemove.add(itemStack);
+                        } else if (harvesterInHand.pollenStack <= MAX_POLLEN) {
+                            // add max - pollenstack
+                            int toAdd = MAX_POLLEN - harvesterInHand.pollenStack;
+                            if (toAdd + harvesterInHand.pollenStack >= 128) {
+                                System.out.println("Too many pollen in the harvester. Please report this error on the GitHub page.");
+                            }
+                            harvesterInHand.pollenStack += toAdd;
+                            ItemStack newStack = new ItemStack(ModItems.POLLEN::get, itemStack.getCount() - toAdd);
+                            newStacks.add(newStack);
+                            toRemove.add(itemStack);
+                        }
+                    }
+                }
+                for (ItemStack itemStack : toRemove) {
+                    playerEntity.inventory.removeItem(itemStack);
+                }
+                for (ItemStack itemStack : newStacks) {
+                    playerEntity.inventory.add(itemStack);
                 }
             }
         }

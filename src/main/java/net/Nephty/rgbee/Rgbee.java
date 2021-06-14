@@ -1,10 +1,12 @@
 package net.Nephty.rgbee;
 
+import net.Nephty.rgbee.data.features.EnchantedFlowerGeneration;
 import net.Nephty.rgbee.setup.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -39,6 +41,7 @@ public class Rgbee
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         // Register ourselves for server and other game events we are interested in
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.NORMAL, EnchantedFlowerGeneration::addFlowers);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
