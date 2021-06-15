@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "   ",
+    "#o#"
+  ],
+  "key": {
+    "#": {
+      "item": "rgbee:red_wheat"
+    },
+    "o": {
+      "item": "rgbee:red_pollen"
+    }
+  },
+  "result": {
+    "item": "rgbee:red_cookie",
+    "count": 8
+  }
+}

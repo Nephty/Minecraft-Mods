@@ -1,12 +1,10 @@
 package net.Nephty.rgbee.data.blocks;
 
 import net.Nephty.rgbee.setup.ModItems;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.item.*;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
@@ -31,11 +29,6 @@ public class PollenHarvester extends ShearsItem {
 
     @Override
     public boolean mineBlock(ItemStack itemStack, World world, BlockState blockState, BlockPos blockPos, LivingEntity livingEntity) {
-        /*
-        itemStack.hurtAndBreak(1, livingEntity, (var) -> {
-            var.broadcastBreakEvent(EquipmentSlotType.MAINHAND);
-        });
-         */
         return false;
     }
 

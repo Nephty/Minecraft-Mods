@@ -27,6 +27,11 @@ public class ModItemsModelProvider extends ItemModelProvider {
         itemBuilder(itemGenerated, "liquid_pollen");
         itemBuilder(itemGenerated, "liquid_pollen_bottle");
         itemBuilder(itemGenerated, "pollen_harvester");
+        itemBuilder(itemGenerated, "green_pollen");
+        itemBuilder(itemGenerated, "red_pollen");
+        itemBuilder(itemGenerated, "blue_pollen");
+        itemBuilder(itemGenerated, "cyan_pollen");
+        itemBuilder(itemGenerated, "magenta_pollen");
         withExistingParent("enchanted_flower", modLoc("block/enchanted_flower"));
     }
 

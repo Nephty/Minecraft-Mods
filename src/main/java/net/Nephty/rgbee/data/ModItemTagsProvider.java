@@ -19,5 +19,21 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.DECORATION_BLOCKS_ENCHANTED_FLOWER, ModTags.Items.DECORATION_BLOCKS_ENCHANTED_FLOWER);
         tag(ModTags.Items.MATERIALS_LIQUID_POLLEN).addTag(Tags.Items.SLIMEBALLS);
         tag(ModTags.Items.TOOLS_POLLEN_HARVESTER).addTag(Tags.Items.SHEARS);
+        tag(ModTags.Items.MISC_POLLEN).addTag(Tags.Items.DUSTS);
+        tag(ModTags.Items.MISC_GREEN_POLLEN).addTag(Tags.Items.DUSTS);
+        tag(ModTags.Items.MISC_RED_POLLEN).addTag(Tags.Items.DUSTS);
+        tag(ModTags.Items.MISC_BLUE_POLLEN).addTag(Tags.Items.DUSTS);
+        tag(ModTags.Items.MISC_CYAN_POLLEN).addTag(Tags.Items.DUSTS);
+        tag(ModTags.Items.MISC_MAGENTA_POLLEN).addTag(Tags.Items.DUSTS);
+        tag(ModTags.Items.MISC_GREEN_WHEAT).addTag(Tags.Items.CROPS_WHEAT);
+        tag(ModTags.Items.MISC_RED_WHEAT).addTag(Tags.Items.CROPS_WHEAT);
+        tag(ModTags.Items.MISC_BLUE_WHEAT).addTag(Tags.Items.CROPS_WHEAT);
+        tag(ModTags.Items.MISC_CYAN_WHEAT).addTag(Tags.Items.CROPS_WHEAT);
+        tag(ModTags.Items.MISC_MAGENTA_WHEAT).addTag(Tags.Items.CROPS_WHEAT);
+        // tag(ModTags.Items.MISC_GREEN_COOKIE).addTag(Tags.Items.CROPS_WHEAT);
+        // tag(ModTags.Items.MISC_RED_COOKIE).addTag(Tags.Items.CROPS_WHEAT);
+        // tag(ModTags.Items.MISC_BLUE_COOKIE).addTag(Tags.Items.CROPS_WHEAT);
+        // tag(ModTags.Items.MISC_CYAN_COOKIE).addTag(Tags.Items.CROPS_WHEAT);
+        // tag(ModTags.Items.MISC_MAGENTA_COOKIE).addTag(Tags.Items.CROPS_WHEAT);
     }
 }

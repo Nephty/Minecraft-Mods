@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#o#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rgbee:pollen"
+    },
+    "o": {
+      "item": "minecraft:cyan_dye"
+    }
+  },
+  "result": {
+    "item": "rgbee:cyan_pollen",
+    "count": 8
+  }
+}
