@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "rgbee:enchanted_flower"
+    "#forge:storage_blocks/pollen_block"
   ]
 }
