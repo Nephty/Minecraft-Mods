@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rgbee:item/golden_pollen"
+    "layer0": "rgbee:item/red_pollen"
   }
 }

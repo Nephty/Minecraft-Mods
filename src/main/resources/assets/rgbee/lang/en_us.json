@@ -5,5 +5,20 @@
   "item.rgbee.liquid_pollen_bottle": "Liquid Pollen Bottle",
   "block.rgbee.enchanted_flower": "Enchanted Flower",
   "item.rgbee.pollen_harvester": "Pollen Harvester",
-  "item.rgbee.golden_pollen": "Golden Pollen"
+  "item.rgbee.golden_pollen": "Golden Pollen",
+  "item.rgbee.green_pollen": "Green Pollen",
+  "item.rgbee.red_pollen": "Red Pollen",
+  "item.rgbee.blue_pollen": "Blue Pollen",
+  "item.rgbee.cyan_pollen": "Cyan Pollen",
+  "item.rgbee.magenta_pollen": "Magenta Pollen",
+  "item.rgbee.green_wheat": "Green Wheat",
+  "item.rgbee.red_wheat": "Red Wheat",
+  "item.rgbee.blue_wheat": "Blue Wheat",
+  "item.rgbee.cyan_wheat": "Cyan Wheat",
+  "item.rgbee.magenta_wheat": "Magenta Wheat",
+  "item.rgbee.green_cookie": "Green Cookie",
+  "item.rgbee.red_cookie": "Red Cookie",
+  "item.rgbee.blue_cookie": "Blue Cookie",
+  "item.rgbee.cyan_cookie": "Cyan Cookie",
+  "item.rgbee.magenta_cookie": "Magenta Cookie"
 }
